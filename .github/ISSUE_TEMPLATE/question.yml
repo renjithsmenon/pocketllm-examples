@@ -1,0 +1,15 @@
+name: Question
+description: Ask about setup, connecting clients, models or purchases.
+labels: [question]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Check the [support page](https://renjithsmenon.github.io/pocketllm-examples/support/) first.
+        **Do not paste your API key, prompts, or anything personal.**
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+    validations:
+      required: true

@@ -1,0 +1,38 @@
+name: Model compatibility
+description: Report a GGUF model that does or doesn't work in PocketLLM Server.
+labels: [models]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Do not paste your API key or prompt content.** Model names and file names are fine.
+  - type: input
+    id: model
+    attributes:
+      label: Model and source
+      description: The Hugging Face repo and file name, or "in-app catalog".
+      placeholder: bartowski/Phi-3.5-mini-instruct-GGUF · Phi-3.5-mini-instruct-Q4_K_M.gguf
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: iPhone model and iOS version
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: Result
+      options:
+        - Loads and works
+        - Loads, but responses are wrong or garbled
+        - Doesn't load (error shown)
+        - Tool calling doesn't work
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: The error message from the app, the Context Size setting, and anything else useful.

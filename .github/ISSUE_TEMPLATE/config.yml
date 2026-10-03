@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Support and troubleshooting
+    url: https://renjithsmenon.github.io/pocketllm-examples/support/
+    about: Common problems and answers. Please check here first.
+  - name: Privacy policy
+    url: https://renjithsmenon.github.io/pocketllm-examples/privacy/
+    about: How PocketLLM Server handles data.

@@ -1,0 +1,41 @@
+name: Bug report
+description: Something in PocketLLM Server isn't working as expected.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Issues are public. Do not paste your API key, your prompts or responses, or anything personal.**
+        If you posted a key by accident, regenerate it in PocketLLM: Settings → API Key → Regenerate API Key.
+  - type: input
+    id: device
+    attributes:
+      label: iPhone model and iOS version
+      placeholder: iPhone 17 Pro, iOS 26.1
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: PocketLLM version
+      description: Settings → About
+      placeholder: 1.0.0 (1)
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Model
+      placeholder: Qwen3 4B Instruct 2507 (Q4_K_M, 2.3 GB)
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead. Include HTTP status codes or on-screen error messages.
+    validations:
+      required: true
+  - type: input
+    id: client
+    attributes:
+      label: Client (for connection problems)
+      placeholder: Python openai 2.x / curl / LangChain / my agent
